@@ -199,6 +199,92 @@ section.bioage-loc {
   }
 }
 
+section.why-bioage {
+  background-color: var(--color-bg-secondary);
+  padding: 6rem 0;
+  div.container {
+    display: flex;
+    article {
+      width: 60%;
+      padding-right: 8rem;
+      h2,
+      h3 {
+        margin: 2rem 0;
+      }
+      h3 {
+        color: var(--color-bg-primary);
+      }
+    }
+    .img-container {
+      width: 40%;
+      img {
+        width: 100%;
+        border: 1px solid var(--color-border);
+        border-radius: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  section.why-bioage {
+    div.container {
+      display: flex;
+      article {
+        width: 65%;
+        padding-right: 2rem;
+        h2,
+        h3 {
+          margin: 2rem 0;
+        }
+        h3 {
+          color: var(--color-bg-primary);
+        }
+      }
+      .img-container {
+        width: 35%;
+        padding-top: 8rem;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  section.why-bioage {
+    padding: 3rem 0;
+    div.container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      article {
+        order: 2;
+        width: 100%;
+        padding-right: 2rem;
+        h2,
+        h3 {
+        }
+        h3 {
+        }
+      }
+      .img-container {
+        order: 1;
+        width: 100%;
+        max-width: 314px;
+        padding-top: 0;
+        padding-bottom: 2rem;
+        margin: 0 auto;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
 section.regulatory {
   background-color: var(--color-bg-primary);
   padding: 3rem 0;

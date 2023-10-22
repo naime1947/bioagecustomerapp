@@ -3,7 +3,7 @@ html {
   box-sizing: border-box;
 }
 
-body{
+body {
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
   font-weight: 500;
@@ -12,29 +12,55 @@ body{
   background-color: var(--color-body);
 }
 
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
 }
-h1{
+h1 {
   font-size: 78px;
 }
-h2{
+h2 {
   font-size: 46px;
 }
+h3 {
+  font-size: 32px;
+  line-height: 41px;
+}
 
-a{
+ul > li {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  margin: .75rem 0;
+}
+a {
   color: var(--color-primary);
 }
 
 @media screen and (max-width: 575px) {
-  body{
+  body {
     font-size: 14px;
   }
 
-  h1{
+  h1 {
     font-size: 38px;
   }
-  h2{
+  h2 {
     font-size: 22px;
+  }
+
+  h3 {
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  ul > li {
+    font-size: 14px;
+    line-height: 19px;
+    margin: .5rem 0;
   }
 }
