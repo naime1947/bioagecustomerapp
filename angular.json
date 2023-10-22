@@ -21,7 +21,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "localize": ["es-PR"],
             "outputPath": "dist/bioagecustomer",
             "index": "src/index.html",
             "main": "src/main.ts",
