@@ -152,6 +152,53 @@ section.transparent-eye {
   }
 }
 
+section.bioage-loc {
+  background: #fff;
+  padding: 3rem 0 2rem 0;
+  article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      text-align: center;
+      margin: 0;
+    }
+    .img-container {
+      width: 100%;
+      margin: 2rem auto;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  section.bioage-loc {
+    background: #fff;
+    padding: 2rem 0 2rem 0;
+    article {
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  section.bioage-loc {
+    background: #fff;
+    padding: 2rem 0 2rem 0;
+    article {
+      a.btn {
+        display: block;
+        width: 100%;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
 section.regulatory {
   background-color: var(--color-bg-primary);
   padding: 3rem 0;
@@ -175,13 +222,13 @@ section.regulatory {
 }
 
 @media screen and (max-width: 991px) {
-  h2{
+  h2 {
     font-size: 38px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  h2{
+  h2 {
     font-size: 22px;
   }
 }
