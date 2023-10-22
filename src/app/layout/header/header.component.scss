@@ -1,3 +1,6 @@
+.navbar-brand {
+  width: 160px ;
+}
 .nav-item:not(:last-child) {
   line-height: 40px;
 }
@@ -8,7 +11,13 @@
   color: var(--color-secondary);
 }
 
-.navbar-toggler{
+.navbar-toggler {
   border: none;
   outline: none;
+}
+
+@media screen and (max-width: 575px) {
+  .navbar-brand {
+    width: 152px ;
+  }
 }
