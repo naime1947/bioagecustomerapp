@@ -1,0 +1,40 @@
+*,
+html {
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  color: var(--color-primary);
+  background-color: var(--color-body);
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-weight: 700;
+}
+h1{
+  font-size: 78px;
+}
+h2{
+  font-size: 46px;
+}
+
+p{
+
+}
+
+@media screen and (max-width: 575px) {
+  body{
+    font-size: 14 px;
+  }
+
+  h1{
+    font-size: 38px;
+  }
+  h2{
+    font-size: 22px;
+  }
+}
