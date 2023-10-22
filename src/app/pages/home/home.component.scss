@@ -7,7 +7,7 @@ section.banner {
     h1 {
       padding-right: 3rem;
       width: 65%;
-      span{
+      span {
         color: var(--color-secondary);
       }
     }
@@ -80,6 +80,73 @@ section.banner {
           display: flex;
           margin: 0 auto;
         }
+      }
+    }
+  }
+}
+
+section.transparent-eye {
+  background-color: var(--color-bg-primary);
+  padding: 5rem 0;
+  article {
+    display: flex;
+    .img-container {
+      width: 50%;
+      img {
+        width: 100%;
+      }
+    }
+    h2 {
+      width: 50%;
+      padding-top: 1rem;
+      padding-left: 3rem;
+      color: #fff;
+      font-size: 46px;
+      line-height: 56px;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  section.transparent-eye {
+    article {
+      display: block;
+      .img-container {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        width: 70%;
+        img {
+          width: 100%;
+        }
+      }
+      h2 {
+        width: 100%;
+        padding-top: 1.5rem;
+        padding-left: 0rem;
+        font-size: 36px;
+        line-height: 46px;
+
+        text-align: center;
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  section.transparent-eye {
+    padding: 3rem 0;
+    article {
+      .img-container {
+        width: 90%;
+        img {
+          width: 100%;
+        }
+      }
+      h2 {
+        font-size: 22px;
+        line-height: 26px;
+        padding-bottom: 0;
+        margin-bottom: 0;
       }
     }
   }
