@@ -151,3 +151,37 @@ section.transparent-eye {
     }
   }
 }
+
+section.regulatory {
+  background-color: var(--color-bg-primary);
+  padding: 3rem 0;
+
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      text-align: center;
+      color: #fff;
+    }
+
+    img {
+      width: 209px;
+      height: 209px;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  h2{
+    font-size: 38px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  h2{
+    font-size: 22px;
+  }
+}
