@@ -278,3 +278,45 @@ section.know-more {
     }
   }
 }
+
+
+section.references{
+  background-color: #fff;
+  padding: 5rem 0 0 0;
+  article{
+    h3{
+      font-weight: 700;
+    }
+    p.each-reference{
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    p.summary{
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 14px;
+      margin: 2rem 0;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  section.references{
+    background-color: #fff;
+    padding: 2rem 0 0 0;
+    article{
+      h3{
+      }
+      p.each-reference{
+
+      }
+
+      p.summary{
+        font-size: 8px;
+        line-height: 9px;
+        margin: 1rem 0;
+      }
+    }
+  }
+}
