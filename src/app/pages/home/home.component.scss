@@ -226,6 +226,9 @@ section.biomarkers {
           h3 {
             color: var(--color-secondary);
           }
+          p{
+            line-height: 28px;
+          }
         }
       }
     }
@@ -293,6 +296,9 @@ section.biomarkers {
 
           .grid-item {
             margin: 1rem;
+            p{
+              line-height: 21px;
+            }
           }
         }
       }
