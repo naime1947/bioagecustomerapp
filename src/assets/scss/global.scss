@@ -40,10 +40,15 @@ ul > li {
 a {
   color: var(--color-primary);
 }
+p{
+  font-size: 18px;
+  line-height: 26px;
+}
 
 @media screen and (max-width: 575px) {
   body {
     font-size: 14px;
+    line-height: 17px;
   }
 
   h1 {
@@ -62,5 +67,9 @@ a {
     font-size: 14px;
     line-height: 19px;
     margin: .5rem 0;
+  }
+  p{
+    font-size: 14px;
+    line-height: 17px;
   }
 }
