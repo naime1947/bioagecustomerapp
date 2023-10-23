@@ -44,6 +44,12 @@ p{
   font-size: 18px;
   line-height: 26px;
 }
+figcaption{
+  font-weight: 400;
+  line-height: 25px;
+  font-style: italic;
+}
+
 
 @media screen and (max-width: 575px) {
   body {
@@ -71,5 +77,10 @@ p{
   p{
     font-size: 14px;
     line-height: 17px;
+  }
+
+  figcaption{
+    font-size: 10px;
+    line-height: 13px;
   }
 }
