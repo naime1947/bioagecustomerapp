@@ -328,6 +328,59 @@ section.why-bioage {
   }
 }
 
+section.retailer {
+  padding: 5rem 0 5rem 0;
+  article {
+    h2 {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .retailer-logos {
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      gap: 1rem 2.5rem;
+      justify-content: center;
+      align-items: center;
+
+      .img-wrapper {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  section.retailer {
+    padding: 4rem 0 4rem 0;
+    article {
+      h2 {
+        margin-bottom: 3rem;
+      }
+
+      .retailer-logos {
+        grid-template-columns: auto auto;
+        gap: 1rem 2rem;
+
+        .img-wrapper:nth-child(1) {
+          order: 1;
+        }
+        .img-wrapper:nth-child(2) {
+          order: 2;
+        }
+        .img-wrapper:nth-child(3) {
+          order: 4;
+        }
+        .img-wrapper:nth-child(4) {
+          order: 3;
+        }
+      }
+    }
+  }
+}
+
 section.regulatory {
   background-color: var(--color-bg-primary);
   padding: 3rem 0;
