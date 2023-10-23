@@ -13,6 +13,7 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { LangSwitcherModalComponent } from './modals/lang-switcher-modal/lang-switcher-modal.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent, LangSwitcherModalComponent],
@@ -20,6 +21,7 @@ import { LangSwitcherModalComponent } from './modals/lang-switcher-modal/lang-sw
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
     SharedModule,
     ModalModule.forRoot(),
     CollapseModule.forRoot(),

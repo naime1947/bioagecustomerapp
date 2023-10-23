@@ -1,8 +1,100 @@
-.modal-wrapper{
-  background-color: var(--color-bg-secondary);
+.modal-wrapper {
+  background-color: #fff;
   width: 664px;
   height: 631px;
+  padding: 20px;
+  border-radius: 20px;
+  .content {
+    background-color: var(--color-bg-secondary);
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
 
-  border: 15px solid #fff;
-  border-radius: 15px 10px 10px 15px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .img-container {
+      width: 100%;
+      display: flex;
+      img {
+        width: 100%;
+        max-width: 163px;
+        margin: 0 auto;
+      }
+    }
+
+    h2 {
+      margin: 2rem 0;
+    }
+
+    form {
+      .form-group {
+        &.select {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        label {
+          font-weight: 600;
+          font-size: 17px;
+          color: #052460;
+        }
+        select {
+          width: 100%;
+          max-width: 368px;
+          height: 46px;
+
+          select, option{
+            color: #575757;
+            font-size: 16px;
+            font-weight: 400;
+          }
+        }
+
+        &.radio {
+          display: flex;
+          justify-content: center;
+          .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            margin: 1rem 0.5rem;
+            width: 128px;
+            height: 44px;
+            padding: 8px 10px;
+
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+
+            .icon-container {
+              margin-right: 0.5rem;
+              img {
+                width: 100%;
+                max-width: 21px;
+              }
+            }
+
+            span {
+              margin-top: 3px;
+            }
+          }
+        }
+      }
+    }
+
+    button.extended {
+      padding: 10px 100px;
+    }
+  }
+}
+
+.gray-text {
+  color: #979797;
 }

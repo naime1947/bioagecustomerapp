@@ -1,3 +1,57 @@
 <div class="modal-wrapper">
+  <div class="content">
+    <div class="img-container">
+      <img src="/assets/img/earth.png" alt="" />
+    </div>
+    <h2>Welcome to BioAge</h2>
+    <form>
+      <div class="form-group select">
+        <label for="countrySelect" class="form-label">Select Country</label>
+        <select
+          class="form-control"
+          [(ngModel)]="selectedCountry"
+          name="country"
+          id="countrySelect"
+        >
+          <option *ngFor="let country of countryList" [value]="country.code">
+            {{ country.name }}
+          </option>
+        </select>
+      </div>
 
+      <div class="form-group radio">
+        <div class="wrapper" (click)="onLangSelect('en-US')">
+          <div class="icon-container">
+            <img
+              *ngIf="selectedLang == 'en-US'"
+              src="/assets/img/icons/checked.png"
+              alt=""
+            />
+            <img
+              *ngIf="selectedLang != 'en-US'"
+              src="/assets/img/icons/unchecked.png"
+              alt=""
+            />
+          </div>
+          <span [ngClass]="{'gray-text': selectedLang != 'en-US'}">English</span>
+        </div>
+        <div class="wrapper" (click)="onLangSelect('es-PR')">
+          <div class="icon-container">
+            <img
+              *ngIf="selectedLang == 'es-PR'"
+              src="/assets/img/icons/checked.png"
+              alt=""
+            />
+            <img
+              *ngIf="selectedLang != 'es-PR'"
+              src="/assets/img/icons/unchecked.png"
+              alt=""
+            />
+          </div>
+          <span [ngClass]="{'gray-text': selectedLang != 'es-PR'}"> Español</span>
+        </div>
+      </div>
+    </form>
+    <button class="btn btn-primary extended">Confirm</button>
+  </div>
 </div>
