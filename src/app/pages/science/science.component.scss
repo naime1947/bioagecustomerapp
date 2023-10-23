@@ -250,3 +250,31 @@ section.retina {
     }
   }
 }
+
+section.know-more {
+  background-color: var(--color-bg-secondary);
+  padding: 5rem 0;
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      max-width: 980px;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  section.know-more {
+    padding: 3rem 0;
+    article {
+      h2 {
+        max-width: 321px;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
