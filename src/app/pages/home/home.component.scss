@@ -195,6 +195,111 @@ section.video {
   }
 }
 
+section.biomarkers {
+  background-color: var(--color-bg-secondary);
+  padding: 5rem 0;
+  article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .img-container {
+      width: 50%;
+      img {
+        width: 100%;
+        max-width: 550px;
+      }
+    }
+
+    .content {
+      width: 50%;
+      h2 {
+        margin: 1rem 0 2rem 0;
+      }
+
+      .content-grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 1.5rem;
+
+        .grid-item {
+          h3 {
+            color: var(--color-secondary);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  section.biomarkers {
+    article {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .img-container {
+        width: 100%;
+        margin: 0 auto;
+        img {
+          width: 100%;
+          max-width: 550px;
+          margin: 0 auto;
+        }
+      }
+
+      .content {
+        width: 100%;
+        h2 {
+          margin: 1.5rem 1rem;
+        }
+
+        .content-grid {
+          display: block;
+
+          .grid-item {
+            margin: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  section.biomarkers {
+    padding: 2rem 0;
+    article {
+      .img-container {
+        width: 100%;
+        margin: 0 auto;
+        img {
+          width: 100%;
+          max-width: 550px;
+          margin: 0 auto;
+        }
+      }
+
+      .content {
+        width: 100%;
+        h2 {
+          margin: 1.5rem 1rem;
+        }
+
+        .content-grid {
+          display: block;
+
+          .grid-item {
+            margin: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
 section.bioage-loc {
   background: #fff;
   padding: 3rem 0 2rem 0;
@@ -437,7 +542,7 @@ section.partners {
           img {
             width: 100%;
           }
-          .universe img{
+          .universe img {
             max-width: 180px;
           }
         }
