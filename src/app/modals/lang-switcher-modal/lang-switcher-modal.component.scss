@@ -1,5 +1,13 @@
+::ng-deep {
+  .modal-content {
+    background-color: transparent;
+    border: none;
+  }
+}
+
 .modal-wrapper {
   background-color: #fff;
+  margin: 5rem auto;
   width: 664px;
   height: 631px;
   padding: 20px;
@@ -45,12 +53,12 @@
           width: 100%;
           max-width: 368px;
           height: 46px;
-
-          select, option{
-            color: #575757;
-            font-size: 16px;
-            font-weight: 400;
-          }
+        }
+        select,
+        option {
+          color: #575757;
+          font-size: 16px;
+          font-weight: 400;
         }
 
         &.radio {
@@ -97,4 +105,141 @@
 
 .gray-text {
   color: #979797;
+}
+
+@media screen and (max-width: 991px) {
+  .modal-wrapper {
+    width: 531px;
+    height: 511px;
+    padding: 15px;
+    border-radius: 15px;
+    .content {
+      height: 100%;
+      width: 100%;
+      border-radius: 15px;
+
+      .img-container {
+        img {
+          max-width: 128px;
+        }
+      }
+
+      h2 {
+        margin: 2rem 0;
+        font-size: 38px;
+      }
+
+      form {
+        .form-group {
+          &.select {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+          label {
+            font-size: 18px;
+            color: #052460;
+          }
+          select {
+            width: 100%;
+            max-width: 348px;
+            height: 40px;
+          }
+
+          select,
+          option {
+            font-size: 14px;
+          }
+
+          &.radio {
+            .wrapper {
+              margin: 1rem 0.5rem;
+              width: 112px;
+              height: 36px;
+              padding: 8px 10px;
+
+              font-size: 14px;
+
+              .icon-container {
+                margin-right: 0.5rem;
+                img {
+                  max-width: 18px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .modal-wrapper {
+    width: 331px;
+    height: 351px;
+    padding: 10px;
+    border-radius: 10px;
+    .content {
+      height: 100%;
+      width: 100%;
+      border-radius: 10px;
+
+      .img-container {
+        img {
+          max-width: 81px;
+        }
+      }
+
+      h2 {
+        margin: 2rem 0;
+      }
+
+      form {
+        .form-group {
+          &.select {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+          }
+          label {
+            font-size: 11px;
+            color: #052460;
+          }
+          select {
+            width: 100%;
+            max-width: 238px;
+            height: 30px;
+          }
+
+          select,
+          option {
+            font-size: 10px;
+          }
+
+          &.radio {
+            .wrapper {
+              margin: 1rem 0.5rem;
+              width: 83px;
+              height: 28px;
+              padding: 8px 10px;
+
+              font-size: 10px;
+
+              .icon-container {
+                margin-right: 0.5rem;
+                img {
+                  max-width: 13px;
+                }
+              }
+
+              span {
+                margin-top: 3px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
