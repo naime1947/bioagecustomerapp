@@ -5,8 +5,10 @@
   "projects": {
     "bioagecustomer": {
       "i18n": {
-        "sourceLocale": "en-US",
-        "locales": { "es-PR": "src/locale/messages.es.json" }
+        "sourceLocale": "en",
+        "locales": {
+          "es": "src/locale/messages.es.json"
+        }
       },
       "projectType": "application",
       "schematics": {
@@ -21,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-
+            "localize": true,
             "outputPath": "dist/bioagecustomer/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -127,9 +129,7 @@
         "prerender": {
           "builder": "@nguniversal/builders:prerender",
           "options": {
-            "routes": [
-              "/"
-            ]
+            "routes": ["/"]
           },
           "configurations": {
             "production": {
