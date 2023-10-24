@@ -22,7 +22,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
 
-            "outputPath": "dist/bioagecustomer",
+            "outputPath": "dist/bioagecustomer/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -87,6 +87,61 @@
             "styles": ["src/styles.scss"],
             "scripts": []
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/bioagecustomer/server",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json",
+            "inlineStyleLanguage": "scss"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false,
+              "vendorChunk": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "bioagecustomer:build:development",
+              "serverTarget": "bioagecustomer:server:development"
+            },
+            "production": {
+              "browserTarget": "bioagecustomer:build:production",
+              "serverTarget": "bioagecustomer:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "bioagecustomer:build:production",
+              "serverTarget": "bioagecustomer:server:production"
+            },
+            "development": {
+              "browserTarget": "bioagecustomer:build:development",
+              "serverTarget": "bioagecustomer:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
