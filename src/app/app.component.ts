@@ -25,7 +25,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
     if (this.isBrowser) {
       this.handleLangSwitcher();
     }
@@ -44,20 +43,14 @@ export class AppComponent implements OnInit {
   }
 
   openModalWithComponent() {
-    const initialState: ModalOptions = {
-      initialState: {
-        list: [
-          'Open a modal with component',
-          'Pass your data',
-          'Do something else',
-          '...',
-        ],
-        title: 'Modal with component',
-      },
+    const config = {
+      backdrop: true,
+      ignoreBackdropClick: true,
+      keyboard: false,
     };
     this.bsModalRef = this.modalService.show(
       LangSwitcherModalComponent,
-      initialState
+      config
     );
     this.bsModalRef.content.closeBtnName = 'Close';
   }
