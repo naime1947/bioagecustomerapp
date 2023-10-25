@@ -1,0 +1,20 @@
+.btn-primary {
+  background-color: var(--color-bg-primary);
+  color: #fff;
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  &:hover {
+    background-color: var(--color-bg-primary-light);
+  }
+
+  &.extended {
+    padding: 12px 50px;
+  }
+
+  &.btn-block{
+    width: 100%;
+  }
+}
