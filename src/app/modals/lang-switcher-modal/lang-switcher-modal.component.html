@@ -6,7 +6,9 @@
     <h2 i18n>Welcome to BioAge</h2>
     <form>
       <div class="form-group select">
-        <label for="countrySelect" class="form-label" i18n>Select Country</label>
+        <label for="countrySelect" class="form-label" i18n
+          >Select Country</label
+        >
         <select
           class="form-control"
           [(ngModel)]="selectedCountry"
@@ -20,38 +22,40 @@
       </div>
 
       <div class="form-group radio">
-        <div class="wrapper" (click)="onLangSelect('en-US')">
+        <div class="wrapper" (click)="onLangSelect('en')">
           <div class="icon-container">
             <img
-              *ngIf="selectedLang == 'en-US'"
+              *ngIf="selectedLang == 'en'"
               src="assets/img/icons/checked.png"
               alt=""
             />
             <img
-              *ngIf="selectedLang != 'en-US'"
+              *ngIf="selectedLang != 'en'"
               src="assets/img/icons/unchecked.png"
               alt=""
             />
           </div>
-          <span [ngClass]="{'gray-text': selectedLang != 'en-US'}">English</span>
+          <span [ngClass]="{ 'gray-text': selectedLang != 'en' }">English</span>
         </div>
-        <div class="wrapper" (click)="onLangSelect('es-PR')">
+        <div class="wrapper" (click)="onLangSelect('es')">
           <div class="icon-container">
             <img
-              *ngIf="selectedLang == 'es-PR'"
+              *ngIf="selectedLang == 'es'"
               src="assets/img/icons/checked.png"
               alt=""
             />
             <img
-              *ngIf="selectedLang != 'es-PR'"
+              *ngIf="selectedLang != 'es'"
               src="assets/img/icons/unchecked.png"
               alt=""
             />
           </div>
-          <span [ngClass]="{'gray-text': selectedLang != 'es-PR'}"> Español</span>
+          <span [ngClass]="{ 'gray-text': selectedLang != 'es' }">
+            Español</span
+          >
         </div>
       </div>
     </form>
-    <button class="btn btn-primary extended" i18n>Confirm</button>
+    <button class="btn btn-primary extended" (click)="onConfirm()" i18n>Confirm</button>
   </div>
 </div>
