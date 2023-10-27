@@ -28,7 +28,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     if (this.isBrowser) {
       //this.handleLangSwitcher();
-      this.openModalWithComponent();
+      //this.openModalWithComponent();
     }
   }
 

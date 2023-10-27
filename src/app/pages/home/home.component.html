@@ -1,10 +1,11 @@
 <section class="banner">
   <article class="container">
-    <h1 class="title" i18n>
+    <h1 @fadeIn class="title" i18n>
       Your <span>eyes</span> can reveal how fast or slow your body is aging.
     </h1>
     <div class="img-container">
       <img
+        @slideFormRight
         src="assets/img/bioage-banner-phone.png"
         alt="Mockup of BioAge app displaying results on a green phone"
         i18n-alt
@@ -17,7 +18,7 @@
 <section class="transparent-eye">
   <article class="container">
     <div class="video-container">
-      <video preload="metadata" [autoplay]="true" [loop]="true" [muted]="true">
+      <video @fadeIn preload="metadata" [autoplay]="true" [loop]="true" [muted]="true">
         <source
           src="assets/videos/3DEyeAnimation720x405.mp4"
           type="video/mp4"
@@ -32,7 +33,7 @@
         />
       </video>
     </div>
-    <h2 i18n>
+    <h2 @fadeIn i18n>
       The eye is the only transparent part of the body, where you can see the
       blood vessels and nerves directly.
     </h2>
@@ -132,6 +133,7 @@
     </article>
     <div class="img-container">
       <img
+        @slideFormRight
         src="assets/img/eye scanning.png"
         alt="A eye scanning with machine"
         i18n-alt
