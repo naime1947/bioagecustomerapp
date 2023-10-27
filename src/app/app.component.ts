@@ -27,7 +27,8 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.isBrowser) {
-      this.handleLangSwitcher();
+      //this.handleLangSwitcher();
+      this.openModalWithComponent();
     }
   }
 
@@ -46,7 +47,7 @@ export class AppComponent implements OnInit {
   openModalWithComponent() {
     const config = {
       backdrop: true,
-      ignoreBackdropClick: true,
+      ignoreBackdropClick: false,
       keyboard: false,
     };
     this.bsModalRef = this.modalService.show(
