@@ -7,6 +7,7 @@ section.banner {
     h1 {
       padding-right: 3rem;
       width: 65%;
+      color: var(--color-bg-primary);
       span {
         color: var(--color-secondary);
       }
@@ -154,7 +155,7 @@ section.transparent-eye {
 }
 
 section.video {
-  background-color: var(--color-bg-primary-light);
+  background-color: var(--color-secondary);
   padding: 3rem 0 5rem 0;
 
   article {
@@ -494,7 +495,7 @@ section.retailer {
 }
 
 section.partners {
-  background-color: var(--color-bg-primary-light);
+  background-color: var(--color-secondary);
   padding: 5rem;
   article {
     h2 {
@@ -525,7 +526,7 @@ section.partners {
 
 @media screen and (max-width: 767px) {
   section.partners {
-    background-color: var(--color-bg-primary-light);
+    background-color: var(--color-secondary);
     padding: 3rem 0 1rem;
     article {
       h2 {
