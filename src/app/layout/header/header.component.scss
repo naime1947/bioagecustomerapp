@@ -1,5 +1,5 @@
 .navbar-brand {
-  width: 160px ;
+  width: 160px;
 }
 .nav-item:not(:last-child) {
   line-height: 40px;
@@ -15,9 +15,20 @@
   border: none;
   outline: none;
 }
-
+.lang {
+  display: inline-block;
+  height: 38px;
+  width: 38px;
+  background: var(--color-primary);
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 50%;
+  font-size: small;
+  line-height: 3;
+}
 @media screen and (max-width: 575px) {
   .navbar-brand {
-    width: 152px ;
+    width: 152px;
   }
 }

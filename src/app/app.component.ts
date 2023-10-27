@@ -4,7 +4,7 @@ import { LangSwitcherModalComponent } from './modals/lang-switcher-modal/lang-sw
 import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { UserLocalePreferenceModel } from './shared/models/user-local-preference.model';
 import { UserLocaleUtil } from './shared/services/user-locale-preference.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -20,31 +20,31 @@ export class AppComponent implements OnInit {
     @Inject(PLATFORM_ID) private platformId: Object,
     @Inject(DOCUMENT) private document: Document,
     private modalService: BsModalService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {
     this.isBrowser = isPlatformBrowser(platformId);
   }
 
   ngOnInit(): void {
     if (this.isBrowser) {
-      //this.handleLangSwitcher();
-      //this.openModalWithComponent();
+      this.handleLangSwitcher();
     }
   }
 
   handleLangSwitcher() {
     var savedData = UserLocaleUtil.getUserLocalPreference();
     if (!savedData) {
-      this.openModalWithComponent();
+      this.openLangModal();
     } else {
       var langWithDomain = location.host + '/' + savedData.lang;
       if (!location.href.includes(langWithDomain)) {
-        this.openModalWithComponent();
+        location.href = '/' + savedData.lang;
       }
     }
   }
 
-  openModalWithComponent() {
+  openLangModal() {
     const config = {
       backdrop: true,
       ignoreBackdropClick: false,
