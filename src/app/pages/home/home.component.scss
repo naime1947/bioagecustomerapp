@@ -90,9 +90,9 @@ section.transparent-eye {
   padding: 5rem 0;
   article {
     display: flex;
-    .img-container {
+    .video-container {
       width: 50%;
-      img {
+      video{
         width: 100%;
       }
     }
@@ -111,12 +111,12 @@ section.transparent-eye {
   section.transparent-eye {
     article {
       display: block;
-      .img-container {
+      .video-container {
         display: flex;
         justify-content: center;
         margin: auto;
         width: 70%;
-        img {
+        video {
           width: 100%;
         }
       }
@@ -136,9 +136,9 @@ section.transparent-eye {
   section.transparent-eye {
     padding: 3rem 0;
     article {
-      .img-container {
+      .video-container {
         width: 90%;
-        img {
+        video {
           width: 100%;
         }
       }

@@ -3,20 +3,31 @@
     <h1 class="title" i18n>
       Your <span>eyes</span> can reveal how fast or slow your body is aging.
     </h1>
-    <div class="img-container">
+    <figure class="img-container">
       <img
-        src="assets/img/Phone results mockup green 1.png"
-        alt="bioage banner phone image"
+        src="assets/img/bioage-banner-phone.png"
+        alt="Mockup of BioAge app displaying results on a green phone"
         i18n-alt
+        loading="lazy"
       />
-    </div>
+    </figure>
   </article>
 </section>
 
 <section class="transparent-eye">
   <article class="container">
-    <div class="img-container">
-      <img src="assets/img/transparent eye.png" i18n-alt alt="An eye image with" />
+    <div class="video-container">
+      <video
+        preload="metadata"
+        [autoplay]="true"
+        [loop]="true"
+        [muted]="true"
+      >
+        <source
+          src="assets/videos/Toku-Eyes-3D-Eye-Animation-Navy-BG-(1200x720).mp4"
+          type="video/mp4"
+        />
+      </video>
     </div>
     <h2 i18n>
       The eye is the only transparent part of the body, where you can see the
@@ -34,7 +45,7 @@
         controls
       >
         <source
-          src="assets/videos/05 - BioAge - 30sec - 02.mp4"
+          src="assets/videos/bioage-video-homepage.mp4"
           type="video/mp4"
         />
       </video>
@@ -44,7 +55,11 @@
 <section class="biomarkers">
   <article class="container">
     <div class="img-container">
-      <img src="assets/img/eye-marker.png" i18n-alt alt="An eye image with mark" />
+      <img
+        src="assets/img/eye-marker.png"
+        i18n-alt
+        alt="An eye image with mark"
+      />
     </div>
     <div class="content">
       <h2 i18n>Your body’s biomarkers are visible in your eye</h2>
@@ -73,7 +88,11 @@
   <article class="container">
     <h2 i18n>Where to do BioAge</h2>
     <div class="img-container">
-      <img src="assets/img/bioage-location.png" i18n-alt alt="Bioage location map" />
+      <img
+        src="assets/img/bioage-location.png"
+        i18n-alt
+        alt="Bioage location map"
+      />
     </div>
 
     <a class="btn btn-primary extended" i18n>Become a retailer</a>
@@ -123,7 +142,11 @@
     <h2 i18n>Our retailers</h2>
     <div class="retailer-logos">
       <div class="img-wrapper">
-        <img src="assets/img/retailers/hedland.png" i18n-alt alt="hedland logo" />
+        <img
+          src="assets/img/retailers/hedland.png"
+          i18n-alt
+          alt="hedland logo"
+        />
       </div>
       <div class="img-wrapper">
         <img
@@ -140,7 +163,11 @@
         />
       </div>
       <div class="img-wrapper">
-        <img src="assets/img/retailers/pharmacy.png" i18n-alt alt="pharmacy logo" />
+        <img
+          src="assets/img/retailers/pharmacy.png"
+          i18n-alt
+          alt="pharmacy logo"
+        />
       </div>
     </div>
   </article>
@@ -194,6 +221,10 @@
 <section class="regulatory">
   <article class="container">
     <h2 i18n>Regulatory certificates</h2>
-    <img src="assets/img/ISO-13485 1.png" i18n-alt alt="ISO regulatory certificate logo" />
+    <img
+      src="assets/img/ISO-13485 1.png"
+      i18n-alt
+      alt="ISO regulatory certificate logo"
+    />
   </article>
 </section>
