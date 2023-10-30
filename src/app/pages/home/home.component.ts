@@ -5,6 +5,6 @@ import { fadeIn, slideFromRight, slideFormLeft } from 'src/app/animation/animati
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  animations: [fadeIn, slideFromRight, slideFormLeft],
+  //animations: [fadeIn, slideFromRight, slideFormLeft],
 })
 export class HomeComponent {}
