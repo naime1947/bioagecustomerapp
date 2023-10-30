@@ -22,9 +22,16 @@
       >
         <img src="assets/img/icons/menu-toggler-icon.png" alt="toggler icon" />
       </button>
-      <div class="collapse navbar-collapse" [collapse]="isCollapsed">
+      <div
+        [@smoothCollapse]="isCollapsed && innerWidth <= 575 ? 'initial' : 'final'"
+        class="collapse navbar-collapse"
+        [collapse]="isCollapsed"
+      >
         <div class="me-auto"></div>
-        <ul (click)="isCollapsed = !isCollapsed" class="navbar-nav mb-2 mb-lg-0">
+        <ul
+          (click)="isCollapsed = !isCollapsed"
+          class="navbar-nav mb-2 mb-lg-0"
+        >
           <li class="nav-item">
             <a
               class="nav-link"

@@ -1,5 +1,9 @@
 .navbar-brand {
-  width: 160px;
+  display: inline-block;
+  max-width: 160px;
+  img{
+    width: 100%;
+  }
 }
 .nav-item:not(:last-child) {
   line-height: 40px;

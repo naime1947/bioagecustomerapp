@@ -1,3 +1,4 @@
+import { trigger, state, style, transition, animate } from '@angular/animations';
 import { isPlatformBrowser } from '@angular/common';
 import {
   Component,
@@ -13,6 +14,21 @@ import { UserLocaleUtil } from 'src/app/shared/services/user-locale-preference.s
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
+  animations: [
+    trigger('smoothCollapse', [
+      state('initial', style({
+        height:'0',
+        overflow:'hidden',
+        opacity:'0'
+      })),
+      state('final', style({
+        overflow:'hidden',
+        opacity:'1'
+      })),
+      transition('initial=>final', animate('200ms')),
+      transition('final=>initial', animate('100ms'))
+    ]),
+  ]
 })
 export class HeaderComponent implements OnInit {
   isCollapsed = true;
@@ -20,6 +36,7 @@ export class HeaderComponent implements OnInit {
   isBrowser = false;
 
   savedLang: any;
+  innerWidth = 1200;
   /**
    *
    */
@@ -30,6 +47,7 @@ export class HeaderComponent implements OnInit {
     if (this.isBrowser) {
       let preference = UserLocaleUtil.getUserLocalPreference();
       this.savedLang = preference ? preference.lang : 'en';
+      this.innerWidth = window.innerWidth;
     }
   }
 
