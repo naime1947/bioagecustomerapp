@@ -1,5 +1,13 @@
 <footer class="container">
   <p class="text-center" i18n>
-    Built by Toku © {{ year }} | <a href="www.tokueyes.com">www.tokueyes.com</a>
+    Built by Toku © {{ year }} | <a href="www.tokueyes.com">www.tokueyes.com</a> <a
+    class="toggler"
+    aria-current="page"
+    (click)="onToggle()"
+    style="cursor: pointer"
+  >
+    <span class="lang">{{ savedLang }}</span>
+  </a>
   </p>
+
 </footer>

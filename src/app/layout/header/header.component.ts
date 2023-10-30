@@ -32,7 +32,5 @@ export class HeaderComponent implements OnInit {
       this.savedLang = preference ? preference.lang : 'en';
     }
   }
-  onToggle() {
-    this.handleLangSwitch.emit();
-  }
+
 }
