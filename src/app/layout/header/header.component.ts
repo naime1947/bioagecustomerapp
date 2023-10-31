@@ -48,7 +48,14 @@ export class HeaderComponent implements OnInit {
       let preference = UserLocaleUtil.getUserLocalPreference();
       this.savedLang = preference ? preference.lang : 'en';
       this.innerWidth = window.innerWidth;
+
+      this.addAnimationClasses();
     }
+
+
   }
 
+  addAnimationClasses(){
+
+  }
 }

@@ -5,6 +5,8 @@ import { DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { UserLocalePreferenceModel } from './shared/models/user-local-preference.model';
 import { UserLocaleUtil } from './shared/services/user-locale-preference.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import * as AOS from 'aos';
+
 
 @Component({
   selector: 'app-root',
@@ -29,6 +31,12 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     if (this.isBrowser) {
       this.handleLangSwitcher();
+      AOS.init({
+        once: false,
+        offset: 200,
+        duration: 400
+      });
+      AOS.refresh();
     }
   }
 

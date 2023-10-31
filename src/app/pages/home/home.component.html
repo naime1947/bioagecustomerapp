@@ -1,11 +1,13 @@
 <section class="banner">
   <article class="container">
-    <h1 class="title animate__animated animate__fadeInLeft" i18n>
+    <h1 id="bannerTitle" data-aos="flip-left" class="title" i18n>
       Your <span>eyes</span> can reveal how fast or slow your body is aging.
     </h1>
     <div class="img-container">
       <img
-        class="animate__animated animate__pulse"
+        id="bannerImg"
+        data-aos="flip-right"
+        class=" "
         src="assets/img/bioage-banner-phone.png"
         alt="Mockup of BioAge app displaying results on a green phone"
         i18n-alt
@@ -17,7 +19,7 @@
 
 <section class="transparent-eye">
   <article class="container">
-    <div class="video-container">
+    <div class="video-container" data-aos="slide-left">
       <video preload="metadata" [autoplay]="true" [loop]="true" [muted]="true">
         <source
           src="assets/videos/3DEyeAnimation720x405.mp4"
@@ -33,7 +35,7 @@
         />
       </video>
     </div>
-    <h2 i18n>
+    <h2 i18n data-aos="slide-right">
       The eye is the only transparent part of the body, where you can see the
       blood vessels and nerves directly.
     </h2>
@@ -41,8 +43,10 @@
 </section>
 <section class="video">
   <article class="container">
-    <h2 i18n>Accessible health screening through the eyes</h2>
-    <div class="video-container">
+    <h2 i18n data-aos="flip-left" data-aos-offset="400">
+      Accessible health screening through the eyes
+    </h2>
+    <div class="video-container" data-aos="zoom-in" data-aos-offset="300">
       <video
         preload="metadata"
         poster="assets/img/video-thumbnail.png"
@@ -63,11 +67,14 @@
         src="assets/img/eye-marker.png"
         i18n-alt
         alt="An eye image with mark"
+        data-aos="slide-left"
       />
     </div>
-    <div class="content">
-      <h2 i18n>Your body’s biomarkers are visible in your eye</h2>
-      <div class="content-grid">
+    <div class="content" data-aos="slide-right">
+      <h2 data-aos="flip-left" i18n>
+        Your body’s biomarkers are visible in your eye
+      </h2>
+      <div class="content-grid" data-aos="flip-up">
         <div class="grid-item">
           <h3 i18n>1. Blood vessels</h3>
           <p i18n>Provides an estimate of your cardiovascular health</p>
@@ -90,8 +97,8 @@
 </section>
 <section class="bioage-loc">
   <article class="container">
-    <h2 i18n>Where to do BioAge</h2>
-    <div class="img-container">
+    <h2 i18n data-aos="slide-down">Where to do BioAge</h2>
+    <div class="img-container" data-aos="flip-right">
       <img
         src="assets/img/bioage-location.png"
         i18n-alt
@@ -105,9 +112,9 @@
 
 <section class="why-bioage">
   <div class="container">
-    <article>
-      <h2 i18n>Why get BioAge done?</h2>
-      <h3 i18n>
+    <article data-aos="slide-left">
+      <h2 i18n data-aos="fade-down-left">Why get BioAge done?</h2>
+      <h3 i18n data-aos="fade-down-right">
         BioAge gives you an overall view of your health and an early indication
         of health deterioration
       </h3>
@@ -131,7 +138,7 @@
         </li>
       </ul>
     </article>
-    <div class="img-container">
+    <div class="img-container" data-aos="slide-right">
       <img
         src="assets/img/eye scanning.png"
         alt="A eye scanning with machine"
@@ -143,8 +150,8 @@
 
 <section class="retailer">
   <article class="container">
-    <h2 i18n>Our retailers</h2>
-    <div class="retailer-logos">
+    <h2 i18n data-aos="slide-left">Our retailers</h2>
+    <div class="retailer-logos" data-aos="zoom-in-down">
       <div class="img-wrapper">
         <img
           src="assets/img/retailers/hedland.png"
@@ -179,16 +186,16 @@
 
 <section class="partners">
   <article class="container">
-    <h2 i18n>Our partners and investors</h2>
-    <div class="partner-logos desktop">
-      <div class="img-container">
+    <h2 i18n data-aos="fade-up-left">Our partners and investors</h2>
+    <div class="partner-logos desktop" data-aos="fade-up-right">
+      <div class="img-container" data-aos="flip-right">
         <img
           src="assets/img/partners/partnerslogos1.png"
           alt="partners logo"
           i18n-alt
         />
       </div>
-      <div class="img-container">
+      <div class="img-container" data-aos="flip-right">
         <img
           src="assets/img/partners/partnerslogos2.png"
           alt="partners logo"
@@ -196,22 +203,22 @@
         />
       </div>
     </div>
-    <div class="partner-logos mobile">
-      <div class="img-container">
+    <div class="partner-logos mobile" data-aos="fade-up-right">
+      <div class="img-container" data-aos="flip-right">
         <img
           src="assets/img/partners/partnerslogos3.png"
           alt="partners logo"
           i18n-alt
         />
       </div>
-      <div class="img-container">
+      <div class="img-container" data-aos="flip-right">
         <img
           src="assets/img/partners/partnerslogos4.png"
           alt="partners logo"
           i18n-alt
         />
       </div>
-      <div class="img-container universe">
+      <div class="img-container universe" data-aos="flip-right">
         <img
           src="assets/img/partners/partnerslogos5.png"
           alt="partners logo"
@@ -224,8 +231,9 @@
 
 <section class="regulatory">
   <article class="container">
-    <h2 i18n>Regulatory certificates</h2>
+    <h2 i18n data-aos="fade-down-left">Regulatory certificates</h2>
     <img
+      data-aos="flip-up"
       src="assets/img/ISO-13485 1.png"
       i18n-alt
       alt="ISO regulatory certificate logo"
