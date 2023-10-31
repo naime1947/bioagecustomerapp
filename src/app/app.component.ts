@@ -34,7 +34,7 @@ export class AppComponent implements OnInit {
       AOS.init({
         once: false,
         offset: 200,
-        duration: 400
+        duration: 800
       });
       AOS.refresh();
     }
