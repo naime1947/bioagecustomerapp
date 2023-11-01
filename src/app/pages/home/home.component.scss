@@ -332,7 +332,7 @@ section.biomarkers {
 
 section.bioage-loc {
   background: #fff;
-  padding: 5rem 0 2rem 0;
+  padding: 5rem 0 3rem 0;
   article {
     display: flex;
     flex-direction: column;
@@ -405,22 +405,25 @@ section.bioage-loc {
 
 section.why-bioage {
   background-color: var(--color-bg-secondary);
-  padding: 6rem 0;
+  padding: 5rem 0;
   div.container {
     display: flex;
     article {
       width: 60%;
       padding-right: 8rem;
-      h2,
-      h3 {
-        margin: 2rem 0;
+      h2 {
+        margin: 2rem 0 1.5rem 0;
       }
       h3 {
         color: var(--color-bg-primary);
+        margin: 1rem 0;
       }
     }
     .img-container {
       width: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       img {
         width: 100%;
         border: 1px solid var(--color-border);
@@ -437,12 +440,9 @@ section.why-bioage {
       article {
         width: 65%;
         padding-right: 2rem;
-        h2,
         h3 {
-          margin: 2rem 0;
         }
         h3 {
-          color: var(--color-bg-primary);
         }
       }
       .img-container {
@@ -467,7 +467,34 @@ section.why-bioage {
         order: 2;
         width: 100%;
         padding-right: 2rem;
-        h2,
+        h2 {
+        }
+        h3 {
+        }
+      }
+      .img-container {
+        order: 1;
+        width: 80%;
+        padding-top: 0;
+        padding-bottom: 0.75rem;
+        margin: 0 auto;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  section.why-bioage {
+    padding-top: 2.5rem;
+    padding-bottom: 1rem;
+    div.container {
+      article {
+        order: 2;
+        padding-right: 0rem;
         h3 {
         }
         h3 {
@@ -476,10 +503,7 @@ section.why-bioage {
       .img-container {
         order: 1;
         width: 100%;
-        padding-top: 0;
-        padding-bottom: 2rem;
-        margin: 0 auto;
-
+        padding-bottom: 0rem;
         img {
           width: 100%;
         }
@@ -522,8 +546,13 @@ section.retailer {
 
       .retailer-logos {
         grid-template-columns: auto auto;
-        gap: 1rem 2rem;
-
+        gap: 1rem 0;
+        .img-wrapper {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 0 1.5rem;
+        }
         .img-wrapper:nth-child(1) {
           order: 1;
         }
@@ -627,7 +656,5 @@ section.regulatory {
     }
   }
 }
-
-
 
 // something
