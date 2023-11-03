@@ -23,7 +23,9 @@
         <img src="assets/img/icons/menu-toggler-icon.png" alt="toggler icon" />
       </button>
       <div
-        [@smoothCollapse]="isCollapsed && innerWidth <= 575 ? 'initial' : 'final'"
+        [@smoothCollapse]="
+          isCollapsed && innerWidth <= 575 ? 'initial' : 'final'
+        "
         class="collapse navbar-collapse"
         [collapse]="isCollapsed"
       >
@@ -44,15 +46,6 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="#" i18n>Sign In</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">
-              <img
-                src="assets/img/icons/user-icon.png"
-                i18n-alt
-                alt="user icon for login"
-              />
-            </a>
           </li>
         </ul>
       </div>
