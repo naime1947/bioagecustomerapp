@@ -681,9 +681,40 @@ section.regulatory {
       color: #fff;
     }
 
-    img {
-      width: 209px;
-      height: 209px;
+    .images {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .img-container {
+        padding: 1rem 1.5rem;
+        width: 33%;
+        max-width: 180px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  section.regulatory {
+    padding: 3rem 0 1rem;
+
+    article {
+      h2 {
+      }
+
+      .images {
+        .img-container {
+          padding: 1rem 0.5rem;
+          width: 33%;
+          max-width: 100px;
+          img {
+            width: 100%;
+          }
+        }
+      }
     }
   }
 }
