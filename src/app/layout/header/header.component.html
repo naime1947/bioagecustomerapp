@@ -20,7 +20,8 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <img src="assets/img/icons/menu-toggler-icon.png" alt="toggler icon" />
+        <img *ngIf="isCollapsed" src="assets/img/icons/menu-toggler-icon.png" alt="toggler icon" />
+        <img *ngIf="!isCollapsed" src="assets/img/icons/icons8-close.svg" alt="toggler icon" />
       </button>
       <div
         [@smoothCollapse]="
