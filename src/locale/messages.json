@@ -1,5 +1,5 @@
 {
-  "locale": "en",
+  "locale": "es",
   "translations": {
     "5604561635700604864": " Built by Toku © {$INTERPOLATION} | {$START_LINK}www.tokueyes.com{$CLOSE_LINK}{$START_LINK_1}{$START_TAG_SPAN}{$INTERPOLATION_1}{$CLOSE_TAG_SPAN}{$CLOSE_LINK}",
     "8797010732893355148": "BioAge Logo",
