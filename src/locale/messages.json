@@ -1,5 +1,5 @@
 {
-  "locale": "es",
+  "locale": "en",
   "translations": {
     "5604561635700604864": " Built by Toku © {$INTERPOLATION} | {$START_LINK}www.tokueyes.com{$CLOSE_LINK}{$START_LINK_1}{$START_TAG_SPAN}{$INTERPOLATION_1}{$CLOSE_TAG_SPAN}{$CLOSE_LINK}",
     "8797010732893355148": "BioAge Logo",
@@ -16,7 +16,7 @@
     "8958888248628890480": "An eye image with mark",
     "2935948165265742254": " Your body’s biomarkers are visible in your eye ",
     "785939898965844665": "1. Blood vessels",
-    "6149453766676176994": "Provides an estimate of your cardiovascular health",
+    "5377981597613074619": "The retinal image section",
     "7972258312558832604": "2. Nerve",
     "7977251238168125830": "Provides insight to your neurological health",
     "512093974094212755": "3. Macula",
