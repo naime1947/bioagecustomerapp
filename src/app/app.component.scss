@@ -1,0 +1,7 @@
+::ng-deep {
+  .modal-dialog-bottom {
+    display: flex;
+    align-items: flex-end;
+    min-height: calc(100% - var(--bs-modal-margin) * 2);
+  }
+}

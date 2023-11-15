@@ -6,15 +6,39 @@
   border: none;
   font-size: 16px;
   font-weight: 700;
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: #fff;
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
   &:hover {
+    opacity: 0.9 !important;
     background-color: var(--color-secondary);
+  }
+}
+
+.btn {
+  &:hover {
+    opacity: 0.95 !important;
   }
 
   &.extended {
     padding: 12px 50px;
   }
 
-  &.btn-block{
+  &.btn-block {
     width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 575px) {
+  .btn, .btn-primary, .btn-secondary{
+    font-size: 14px;
   }
 }

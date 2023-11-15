@@ -14,6 +14,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { LangSwitcherModalComponent } from './modals/lang-switcher-modal/lang-switcher-modal.component';
 import { FormsModule } from '@angular/forms';
+import { CookieConsentModalComponent } from './modals/cookie-consent-modal/cookie-consent-modal.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     LangSwitcherModalComponent,
+    CookieConsentModalComponent
   ],
   imports: [
     BrowserModule,

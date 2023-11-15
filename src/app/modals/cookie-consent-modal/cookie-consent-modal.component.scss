@@ -1,0 +1,30 @@
+.content {
+  background-color: var(--color-bg-secondary);
+  padding: 3.5rem 3rem 3rem 3rem;
+  border-radius: 8px;
+
+  p {
+    color: var(--color-bg-primary);
+  }
+
+  button {
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .content {
+    background-color: var(--color-bg-secondary);
+    padding: 2rem 1rem;
+    border-radius: 8px;
+
+    button {
+      margin-top: 0.6rem;
+      padding: 0.5rem;
+    }
+  }
+}
+
+
+
