@@ -16,7 +16,12 @@ import { LangSwitcherModalComponent } from './modals/lang-switcher-modal/lang-sw
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, LangSwitcherModalComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    LangSwitcherModalComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -1,4 +1,10 @@
-import { trigger, state, style, transition, animate } from '@angular/animations';
+import {
+  trigger,
+  state,
+  style,
+  transition,
+  animate,
+} from '@angular/animations';
 import { isPlatformBrowser } from '@angular/common';
 import {
   Component,
@@ -8,6 +14,8 @@ import {
   Output,
   PLATFORM_ID,
 } from '@angular/core';
+import { Router } from '@angular/router';
+import { SignInLinkService } from 'src/app/shared/services/sign-in-link.service';
 import { UserLocaleUtil } from 'src/app/shared/services/user-locale-preference.service';
 
 @Component({
@@ -16,19 +24,25 @@ import { UserLocaleUtil } from 'src/app/shared/services/user-locale-preference.s
   styleUrls: ['./header.component.scss'],
   animations: [
     trigger('smoothCollapse', [
-      state('initial', style({
-        height:'0',
-        overflow:'hidden',
-        opacity:'0'
-      })),
-      state('final', style({
-        overflow:'hidden',
-        opacity:'1'
-      })),
+      state(
+        'initial',
+        style({
+          height: '0',
+          overflow: 'hidden',
+          opacity: '0',
+        })
+      ),
+      state(
+        'final',
+        style({
+          overflow: 'hidden',
+          opacity: '1',
+        })
+      ),
       transition('initial=>final', animate('200ms')),
-      transition('final=>initial', animate('100ms'))
+      transition('final=>initial', animate('100ms')),
     ]),
-  ]
+  ],
 })
 export class HeaderComponent implements OnInit {
   isCollapsed = true;
@@ -40,7 +54,11 @@ export class HeaderComponent implements OnInit {
   /**
    *
    */
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    public signInLinkService: SignInLinkService,
+    private router: Router
+  ) {
     this.isBrowser = isPlatformBrowser(platformId);
   }
   ngOnInit(): void {
@@ -48,14 +66,10 @@ export class HeaderComponent implements OnInit {
       let preference = UserLocaleUtil.getUserLocalPreference();
       this.savedLang = preference ? preference.lang : 'en';
       this.innerWidth = window.innerWidth;
-
-      this.addAnimationClasses();
     }
-
-
   }
 
-  addAnimationClasses(){
-
+  onSignInClick() {
+    window.location.href = this.signInLinkService.signInLink();
   }
 }

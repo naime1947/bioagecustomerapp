@@ -54,7 +54,7 @@ export class AppComponent implements OnInit {
 
   openLangModal() {
     const config = {
-      backdrop: true,
+      backdrop: false,
       ignoreBackdropClick: false,
       keyboard: false,
     };
