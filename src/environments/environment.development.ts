@@ -1,6 +1,7 @@
 export const environment = {
   SIGN_IN_AU_NZ: 'https://www.au.mybioage.com/auth/login',
   SIGN_IN_US: ' https://www.us.mybioage.com/auth/login',
+  COOKIE_CONSENT_KEY: 'cookie_consent',
   COUNTRY_LIST: [
     { name: 'Australia', code: 'AU' },
 

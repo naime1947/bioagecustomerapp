@@ -13,6 +13,8 @@ import { UserLocaleUtil } from './shared/services/user-locale-preference.service
 import { ActivatedRoute, Router } from '@angular/router';
 import * as AOS from 'aos';
 import { CookieConsentModalComponent } from './modals/cookie-consent-modal/cookie-consent-modal.component';
+import { CookieConsentService } from './shared/services/cookie-consent.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -29,7 +31,8 @@ export class AppComponent implements OnInit, AfterViewInit {
     @Inject(DOCUMENT) private document: Document,
     private modalService: BsModalService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private cookieConsentService: CookieConsentService
   ) {
     this.isBrowser = isPlatformBrowser(platformId);
   }
@@ -63,7 +66,7 @@ export class AppComponent implements OnInit, AfterViewInit {
       backdrop: true,
       ignoreBackdropClick: cancelabe,
       keyboard: !cancelabe,
-      class: 'modal-dialog-centered'
+      class: 'modal-dialog-centered',
     };
     this.bsModalRef = this.modalService.show(
       LangSwitcherModalComponent,
@@ -74,7 +77,12 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     if (this.isBrowser) {
-      this.openCookieConsentModal();
+      let value = this.cookieConsentService.getCookie(
+        environment.COOKIE_CONSENT_KEY
+      );
+      if (!value) {
+        this.openCookieConsentModal();
+      }
     }
   }
   openCookieConsentModal() {
@@ -82,7 +90,7 @@ export class AppComponent implements OnInit, AfterViewInit {
       backdrop: true,
       ignoreBackdropClick: true,
       keyboard: false,
-      class: 'modal-dialog-bottom'
+      class: 'modal-dialog-bottom',
     };
     this.bsModalRef = this.modalService.show(
       CookieConsentModalComponent,
